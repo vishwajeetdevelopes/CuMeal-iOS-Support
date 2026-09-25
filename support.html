@@ -1,22 +1,1359 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>CuMeal Support</title>
-<style>
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;max-width:760px;margin:auto;padding:40px 20px;color:#303437;background:#f2f6f7}
-.card{background:#fff;border-radius:18px;padding:28px;box-shadow:0 5px 20px rgba(0,0,0,.08)}h1{margin-top:0}a{color:#1677ff}.note{color:#666}
-</style></head>
-<body><div class="card">
-<h1>CuMeal Support</h1>
-<p>CuMeal is a simple app for checking today's and tomorrow's CU mess menu and mess timings.</p>
-<h2>Need help?</h2>
-<p>For app issues, feedback, or feature requests, please contact the developer using the contact details below.</p>
-<p><strong>Email:</strong> vishwajeetx14@gmail.com</p>
-<p><strong>Developer:</strong> Vishwajeet Kumar</p>
-<h2>Common help</h2>
-<ul>
-<li><strong>Menu not available:</strong> A menu may be unavailable when no menu has been published for that date.</li>
-<li><strong>Other issues:</strong> Include your iPhone model, iOS version, and a description or screenshot when contacting support.</li>
-</ul>
-<p class="note">Last updated: September 2026</p>
-</div></body></html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>Support — CuMeal - CU Mess Menu</title>
+
+  <meta
+    name="description"
+    content="Support page for CuMeal - CU Mess Menu"
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    :root {
+      --bg: #f7f8f3;
+      --surface: #ffffff;
+
+      --green-950: #15261c;
+      --green-900: #1d3527;
+      --green-800: #274a34;
+      --green-700: #356044;
+
+      --green-100: #e5eee7;
+      --green-50: #f1f6f1;
+
+      --gold: #d49a3a;
+      --gold-light: #e8c47e;
+      --gold-soft: #f8ecd6;
+
+      --text: #1d251f;
+      --text-soft: #657066;
+      --text-muted: #8a938b;
+
+      --border: #e2e7df;
+
+      --shadow-sm:
+        0 4px 16px rgba(24, 43, 31, .05);
+
+      --shadow-md:
+        0 14px 40px rgba(24, 43, 31, .09);
+
+      --max-width: 1080px;
+
+      --radius-md: 18px;
+      --radius-lg: 28px;
+    }
+
+
+    /* =========================
+       RESET
+    ========================= */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+
+      margin: 0;
+
+      background: var(--bg);
+
+      color: var(--text);
+
+      font-family:
+        "DM Sans",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      font-size: 16px;
+
+      line-height: 1.7;
+
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .header {
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 100;
+
+      background: rgba(247, 248, 243, .90);
+
+      backdrop-filter: blur(18px);
+
+      -webkit-backdrop-filter: blur(18px);
+
+      border-bottom:
+        1px solid rgba(226, 231, 223, .85);
+    }
+
+    .header-inner {
+
+      max-width: var(--max-width);
+
+      height: 76px;
+
+      margin: auto;
+
+      padding: 0 28px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+    }
+
+
+    /* =========================
+       BRAND
+    ========================= */
+
+    .brand {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      text-decoration: none;
+    }
+
+    .brand-icon {
+
+      width: 40px;
+      height: 40px;
+
+      display: grid;
+
+      place-items: center;
+
+      background: var(--green-900);
+
+      color: white;
+
+      border-radius: 12px;
+
+      font-size: 18px;
+
+      font-weight: 700;
+
+      box-shadow:
+        0 5px 15px rgba(29, 53, 39, .18);
+    }
+
+    .brand-text {
+
+      display: flex;
+
+      flex-direction: column;
+
+      line-height: 1.1;
+    }
+
+    .brand-name {
+
+      color: var(--green-900);
+
+      font-size: 17px;
+
+      font-weight: 700;
+    }
+
+    .brand-subtitle {
+
+      margin-top: 4px;
+
+      color: var(--text-muted);
+
+      font-size: 11px;
+
+      font-weight: 500;
+
+      letter-spacing: .04em;
+    }
+
+    .header-label {
+
+      color: var(--text-soft);
+
+      font-size: 13px;
+
+      font-weight: 500;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+
+      position: relative;
+
+      overflow: hidden;
+
+      border-bottom:
+        1px solid var(--border);
+
+      background:
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(212, 154, 58, .13),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 10% 90%,
+          rgba(53, 96, 68, .10),
+          transparent 30%
+        );
+    }
+
+    .hero-inner {
+
+      max-width: var(--max-width);
+
+      margin: auto;
+
+      padding:
+        78px 28px
+        72px;
+    }
+
+
+    /* =========================
+       EYEBROW
+    ========================= */
+
+    .eyebrow {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      padding: 7px 12px;
+
+      background: var(--green-50);
+
+      border:
+        1px solid var(--green-100);
+
+      border-radius: 100px;
+
+      color: var(--green-800);
+
+      font-size: 12px;
+
+      font-weight: 600;
+
+      letter-spacing: .04em;
+
+      text-transform: uppercase;
+    }
+
+    .eyebrow-dot {
+
+      width: 7px;
+      height: 7px;
+
+      background: var(--gold);
+
+      border-radius: 50%;
+    }
+
+
+    /* =========================
+       HERO TEXT
+    ========================= */
+
+    .hero h1 {
+
+      max-width: 700px;
+
+      margin:
+        22px 0
+        16px;
+
+      color: var(--green-950);
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(43px, 6vw, 68px);
+
+      font-weight: 500;
+
+      letter-spacing: -.045em;
+
+      line-height: 1.04;
+    }
+
+    .hero h1 span {
+
+      color: var(--green-700);
+    }
+
+    .hero-description {
+
+      max-width: 650px;
+
+      margin: 0;
+
+      color: var(--text-soft);
+
+      font-size: 18px;
+
+      line-height: 1.75;
+    }
+
+
+    /* =========================
+       MAIN
+    ========================= */
+
+    .main {
+
+      max-width: var(--max-width);
+
+      margin: auto;
+
+      padding:
+        60px 28px
+        100px;
+    }
+
+
+    /* =========================
+       SUPPORT GRID
+    ========================= */
+
+    .support-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1.2fr)
+        minmax(280px, .8fr);
+
+      gap: 25px;
+
+      align-items: stretch;
+    }
+
+
+    /* =========================
+       CONTACT CARD
+    ========================= */
+
+    .contact-card {
+
+      position: relative;
+
+      overflow: hidden;
+
+      padding: 34px;
+
+      background: var(--green-950);
+
+      color: white;
+
+      border-radius: var(--radius-lg);
+
+      box-shadow: var(--shadow-md);
+    }
+
+    .contact-card::before {
+
+      content: "";
+
+      position: absolute;
+
+      width: 250px;
+      height: 250px;
+
+      right: -100px;
+      top: -110px;
+
+      border:
+        1px solid rgba(255,255,255,.08);
+
+      border-radius: 50%;
+    }
+
+    .contact-card::after {
+
+      content: "";
+
+      position: absolute;
+
+      width: 130px;
+      height: 130px;
+
+      right: 40px;
+      top: -70px;
+
+      border:
+        1px solid rgba(255,255,255,.05);
+
+      border-radius: 50%;
+    }
+
+    .card-label {
+
+      position: relative;
+      z-index: 2;
+
+      margin: 0 0 10px;
+
+      color: #b7c7ba;
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+      letter-spacing: .1em;
+
+      text-transform: uppercase;
+    }
+
+    .contact-card h2 {
+
+      position: relative;
+      z-index: 2;
+
+      margin: 0 0 12px;
+
+      color: white;
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 30px;
+
+      font-weight: 500;
+
+      line-height: 1.25;
+    }
+
+    .contact-card p {
+
+      position: relative;
+      z-index: 2;
+
+      margin: 0 0 25px;
+
+      color: #b9c8bb;
+
+      font-size: 15px;
+    }
+
+    .email-button {
+
+      position: relative;
+      z-index: 3;
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      padding:
+        11px 16px;
+
+      background: var(--gold);
+
+      color: var(--green-950);
+
+      border-radius: 10px;
+
+      text-decoration: none;
+
+      font-size: 14px;
+
+      font-weight: 700;
+
+      transition:
+        transform .2s ease,
+        background .2s ease;
+    }
+
+    .email-button:hover {
+
+      background: var(--gold-light);
+
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================
+       DEVELOPER CARD
+    ========================= */
+
+    .developer-card {
+
+      padding: 34px;
+
+      background: white;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: var(--radius-lg);
+
+      box-shadow: var(--shadow-sm);
+    }
+
+    .developer-icon {
+
+      width: 48px;
+      height: 48px;
+
+      display: grid;
+
+      place-items: center;
+
+      margin-bottom: 22px;
+
+      background: var(--green-50);
+
+      border:
+        1px solid var(--green-100);
+
+      border-radius: 14px;
+
+      color: var(--green-800);
+
+      font-size: 20px;
+
+      font-weight: 700;
+    }
+
+    .developer-card h2 {
+
+      margin: 0 0 7px;
+
+      color: var(--green-950);
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 25px;
+
+      font-weight: 500;
+    }
+
+    .developer-card .role {
+
+      margin: 0;
+
+      color: var(--text-muted);
+
+      font-size: 13px;
+    }
+
+
+    /* =========================
+       COMMON HELP
+    ========================= */
+
+    .help-section {
+
+      margin-top: 60px;
+    }
+
+    .section-header {
+
+      margin-bottom: 25px;
+    }
+
+    .section-eyebrow {
+
+      margin: 0 0 7px;
+
+      color: var(--gold);
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+      letter-spacing: .1em;
+
+      text-transform: uppercase;
+    }
+
+    .section-header h2 {
+
+      margin: 0;
+
+      color: var(--green-950);
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 32px;
+
+      font-weight: 500;
+
+      letter-spacing: -.02em;
+    }
+
+    .section-header p {
+
+      max-width: 650px;
+
+      margin: 8px 0 0;
+
+      color: var(--text-soft);
+
+      font-size: 15px;
+    }
+
+
+    /* =========================
+       HELP ITEMS
+    ========================= */
+
+    .help-list {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+      gap: 15px;
+    }
+
+    .help-item {
+
+      padding: 22px;
+
+      background: white;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: var(--radius-md);
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease;
+    }
+
+    .help-item:hover {
+
+      transform: translateY(-3px);
+
+      border-color: var(--green-100);
+
+      box-shadow: var(--shadow-sm);
+    }
+
+    .help-icon {
+
+      width: 34px;
+      height: 34px;
+
+      display: grid;
+
+      place-items: center;
+
+      margin-bottom: 14px;
+
+      background: var(--gold-soft);
+
+      color: #9b691e;
+
+      border-radius: 10px;
+
+      font-size: 13px;
+
+      font-weight: 700;
+    }
+
+    .help-item h3 {
+
+      margin: 0 0 7px;
+
+      color: var(--green-950);
+
+      font-size: 15px;
+
+      font-weight: 700;
+    }
+
+    .help-item p {
+
+      margin: 0;
+
+      color: var(--text-soft);
+
+      font-size: 14px;
+
+      line-height: 1.65;
+    }
+
+
+    /* =========================
+       CONTACT PROMPT
+    ========================= */
+
+    .bottom-note {
+
+      margin-top: 35px;
+
+      padding: 20px 22px;
+
+      background: var(--green-50);
+
+      border:
+        1px solid var(--green-100);
+
+      border-radius: 14px;
+
+      color: var(--text-soft);
+
+      font-size: 14px;
+    }
+
+    .bottom-note strong {
+
+      color: var(--green-800);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .footer {
+
+      background: var(--green-950);
+
+      color: white;
+    }
+
+    .footer-inner {
+
+      max-width: var(--max-width);
+
+      margin: auto;
+
+      padding:
+        42px 28px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 30px;
+    }
+
+    .footer-brand {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+    }
+
+    .footer-icon {
+
+      width: 34px;
+      height: 34px;
+
+      display: grid;
+
+      place-items: center;
+
+      background:
+        rgba(255,255,255,.1);
+
+      border-radius: 9px;
+
+      font-size: 14px;
+
+      font-weight: 700;
+    }
+
+    .footer-brand-text {
+
+      display: flex;
+
+      flex-direction: column;
+
+      line-height: 1.25;
+    }
+
+    .footer-brand-name {
+
+      color: white;
+
+      font-size: 14px;
+
+      font-weight: 600;
+    }
+
+    .footer-brand-subtitle {
+
+      margin-top: 2px;
+
+      color: #8fa094;
+
+      font-size: 11px;
+    }
+
+    .footer-text {
+
+      color: #94a497;
+
+      font-size: 12px;
+
+      text-align: right;
+    }
+
+    .footer-text div + div {
+
+      margin-top: 3px;
+    }
+
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 750px) {
+
+      .header-inner {
+
+        height: 68px;
+
+        padding:
+          0 20px;
+      }
+
+      .header-label {
+
+        display: none;
+      }
+
+      .hero-inner {
+
+        padding:
+          55px 20px
+          52px;
+      }
+
+      .hero h1 {
+
+        font-size: 44px;
+      }
+
+      .hero-description {
+
+        font-size: 16px;
+      }
+
+      .main {
+
+        padding:
+          40px 20px
+          75px;
+      }
+
+      .support-grid {
+
+        grid-template-columns: 1fr;
+      }
+
+      .help-list {
+
+        grid-template-columns: 1fr;
+      }
+
+      .contact-card,
+      .developer-card {
+
+        padding: 27px;
+      }
+
+      .section-header h2 {
+
+        font-size: 28px;
+      }
+
+      .footer-inner {
+
+        padding:
+          32px 20px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+      }
+
+      .footer-text {
+
+        text-align: left;
+      }
+    }
+
+
+    @media (max-width: 450px) {
+
+      .hero h1 {
+
+        font-size: 39px;
+      }
+
+      .hero-inner {
+
+        padding-top: 45px;
+      }
+
+      .email-button {
+
+        width: 100%;
+
+        justify-content: center;
+      }
+
+    }
+
+
+    /* =========================
+       REDUCED MOTION
+    ========================= */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      * {
+        transition: none !important;
+      }
+
+      html {
+        scroll-behavior: auto;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header class="header">
+
+    <div class="header-inner">
+
+      <a href="#" class="brand">
+
+        <div class="brand-icon">
+          C
+        </div>
+
+        <div class="brand-text">
+
+          <span class="brand-name">
+            CuMeal
+          </span>
+
+          <span class="brand-subtitle">
+            CU Mess Menu
+          </span>
+
+        </div>
+
+      </a>
+
+
+      <div class="header-label">
+        Support
+      </div>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <section class="hero">
+
+    <div class="hero-inner">
+
+      <div class="eyebrow">
+
+        <span class="eyebrow-dot"></span>
+
+        CuMeal Support
+
+      </div>
+
+
+      <h1>
+
+        We're here to
+        <span>help.</span>
+
+      </h1>
+
+
+      <p class="hero-description">
+
+        Need help with CuMeal - CU Mess Menu?
+        Whether you've found an issue, have feedback,
+        or have an idea for a feature, we'd love to hear
+        from you.
+
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       MAIN
+  ========================= -->
+
+  <main class="main">
+
+
+    <!-- CONTACT -->
+
+    <div class="support-grid">
+
+
+      <!-- EMAIL CARD -->
+
+      <section class="contact-card">
+
+        <p class="card-label">
+          Get in touch
+        </p>
+
+
+        <h2>
+          Contact support
+        </h2>
+
+
+        <p>
+
+          For app issues, feedback, or feature requests,
+          send us an email and we'll do our best to help.
+
+        </p>
+
+
+        <a
+          class="email-button"
+          href="mailto:vishwajeetx14@gmail.com"
+        >
+
+          Email support
+
+          <span>
+            ↗
+          </span>
+
+        </a>
+
+      </section>
+
+
+
+      <!-- DEVELOPER CARD -->
+
+      <section class="developer-card">
+
+        <div class="developer-icon">
+          C
+        </div>
+
+
+        <h2>
+          Vishwajeet Kumar
+        </h2>
+
+
+        <p class="role">
+          Developer, CuMeal - CU Mess Menu
+        </p>
+
+      </section>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         COMMON HELP
+    ========================= -->
+
+    <section class="help-section">
+
+
+      <div class="section-header">
+
+        <p class="section-eyebrow">
+          Quick help
+        </p>
+
+
+        <h2>
+          Common questions
+        </h2>
+
+
+        <p>
+
+          A few things to check before contacting support.
+
+        </p>
+
+      </div>
+
+
+
+      <div class="help-list">
+
+
+        <!-- MENU -->
+
+        <article class="help-item">
+
+          <div class="help-icon">
+            01
+          </div>
+
+
+          <h3>
+            Menu not available
+          </h3>
+
+
+          <p>
+
+            A menu may be unavailable when no menu has
+            been published for that particular date.
+
+          </p>
+
+        </article>
+
+
+
+        <!-- APP ISSUE -->
+
+        <article class="help-item">
+
+          <div class="help-icon">
+            02
+          </div>
+
+
+          <h3>
+            App not working as expected
+          </h3>
+
+
+          <p>
+
+            Try closing and reopening the app. If the
+            problem continues, contact support with
+            details about what happened.
+
+          </p>
+
+        </article>
+
+
+
+        <!-- FEEDBACK -->
+
+        <article class="help-item">
+
+          <div class="help-icon">
+            03
+          </div>
+
+
+          <h3>
+            Feedback & suggestions
+          </h3>
+
+
+          <p>
+
+            Have an idea that could make CuMeal better?
+            Send your suggestion by email.
+
+          </p>
+
+        </article>
+
+
+
+        <!-- BUG REPORT -->
+
+        <article class="help-item">
+
+          <div class="help-icon">
+            04
+          </div>
+
+
+          <h3>
+            Reporting an issue
+          </h3>
+
+
+          <p>
+
+            When reporting a problem, include your iPhone
+            model, iOS version, and a description or
+            screenshot if possible.
+
+          </p>
+
+        </article>
+
+
+      </div>
+
+
+      <div class="bottom-note">
+
+        <strong>Tip:</strong>
+
+        Including your iPhone model, iOS version,
+        and a screenshot can help us understand and
+        resolve an issue faster.
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer class="footer">
+
+    <div class="footer-inner">
+
+
+      <div class="footer-brand">
+
+        <div class="footer-icon">
+          C
+        </div>
+
+
+        <div class="footer-brand-text">
+
+          <span class="footer-brand-name">
+            CuMeal
+          </span>
+
+          <span class="footer-brand-subtitle">
+            CU Mess Menu
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-text">
+
+        <div>
+          CuMeal Support
+        </div>
+
+        <div>
+          Last updated September 2026
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </footer>
+
+
+</body>
+
+</html>
