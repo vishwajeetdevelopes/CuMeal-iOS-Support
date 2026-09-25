@@ -1,37 +1,1346 @@
+```html
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>CuMeal Privacy Policy</title>
-<style>
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65;max-width:800px;margin:auto;padding:40px 20px;color:#303437;background:#f2f6f7}
-.card{background:#fff;border-radius:18px;padding:30px;box-shadow:0 5px 20px rgba(0,0,0,.08)}h1{margin-top:0}h2{margin-top:28px}.note{color:#666}
-</style></head>
-<body><div class="card">
-<h1>CuMeal Privacy Policy</h1>
-<p><strong>Effective date:</strong> September 25, 2026</p>
-<p>CuMeal ("CuMeal", "we", "us", or "our") is a mobile application that provides CU mess menu information for today and tomorrow and displays mess timings.</p>
-<h2>Information we collect</h2>
-<p>CuMeal does not require an account or login and does not ask you to provide your name, email address, phone number, location, or other personal information directly in the app.</p>
-<h2>Analytics</h2>
-<p>CuMeal uses Firebase Analytics to understand how the app is used, such as which screens and app features are used. Firebase Analytics is provided by Google and may collect usage, device, and diagnostic information according to Google's applicable documentation and privacy practices.</p>
-<h2>Menu data</h2>
-<p>CuMeal retrieves menu information from Firebase Realtime Database. The database contains menu information such as breakfast, lunch, snacks, and dinner entries. This menu content is not submitted by individual users through the app.</p>
-<h2>Local storage</h2>
-<p>CuMeal stores menu information locally on your device so previously retrieved menus can be displayed without another database request. This cached menu information is not an account or user profile.</p>
-<h2>Advertising</h2>
-<p>The current version of CuMeal does not display advertising.</p>
-<h2>Location</h2>
-<p>CuMeal does not request or use your device's location.</p>
-<h2>Data sharing</h2>
-<p>CuMeal does not sell your personal information. The app uses third-party services, including Google Firebase services, to provide analytics and database functionality. Information handled by those services is subject to their applicable terms and privacy policies.</p>
-<h2>Data retention and deletion</h2>
-<p>Menu data cached on your device can be removed by deleting the CuMeal app or clearing its app data using the operating system's available controls. CuMeal does not maintain a user account or user profile that you can delete from within the app.</p>
-<h2>Children</h2>
-<p>CuMeal is not specifically directed to children and does not knowingly request personal information from children.</p>
-<h2>Changes to this policy</h2>
-<p>We may update this Privacy Policy when the app's data practices change or when necessary to reflect applicable requirements. The updated policy will be published on this page with a new effective date.</p>
-<h2>Contact</h2>
-<p>For privacy questions or requests, contact:</p>
-<p><strong>Developer:</strong> Vishwajeet Kumar<br><strong>Email:</strong> vishwajeetx14@gmail.com</p>
-<p class="note">Last updated: September 25, 2026</p>
-</div></body></html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Privacy Policy — CuMeal</title>
+  <meta name="description" content="CuMeal Privacy Policy">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f7f8f3;
+      --surface: #ffffff;
+      --surface-soft: #eef2e9;
+
+      --green-950: #15261c;
+      --green-900: #1d3527;
+      --green-800: #274a34;
+      --green-700: #356044;
+
+      --green-100: #e5eee7;
+      --green-50: #f1f6f1;
+
+      --gold: #d49a3a;
+      --gold-soft: #f8ecd6;
+
+      --text: #1d251f;
+      --text-soft: #657066;
+      --text-muted: #8a938b;
+
+      --border: #e2e7df;
+
+      --shadow-sm: 0 4px 16px rgba(24, 43, 31, .05);
+      --shadow-md: 0 12px 35px rgba(24, 43, 31, .08);
+
+      --radius-sm: 10px;
+      --radius-md: 18px;
+      --radius-lg: 28px;
+
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+
+      background: rgba(247, 248, 243, .88);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+
+      border-bottom: 1px solid rgba(226, 231, 223, .8);
+    }
+
+    .header-inner {
+      max-width: var(--max-width);
+      height: 76px;
+      margin: auto;
+      padding: 0 28px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+
+      display: grid;
+      place-items: center;
+
+      background: var(--green-900);
+      color: white;
+
+      border-radius: 12px;
+
+      font-size: 19px;
+      font-weight: 700;
+
+      box-shadow: 0 5px 15px rgba(29, 53, 39, .18);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .brand-name {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--green-900);
+    }
+
+    .brand-subtitle {
+      margin-top: 3px;
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: .04em;
+    }
+
+    .header-label {
+      color: var(--text-soft);
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+
+      background:
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(212, 154, 58, .13),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 10% 90%,
+          rgba(53, 96, 68, .10),
+          transparent 30%
+        );
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-inner {
+      max-width: var(--max-width);
+      margin: auto;
+      padding: 80px 28px 72px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      padding: 7px 12px;
+
+      background: var(--green-50);
+      border: 1px solid var(--green-100);
+      border-radius: 100px;
+
+      color: var(--green-800);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow-dot {
+      width: 7px;
+      height: 7px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
+
+    .hero h1 {
+      max-width: 780px;
+
+      margin: 22px 0 18px;
+
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(42px, 6vw, 72px);
+      font-weight: 500;
+      letter-spacing: -.045em;
+      line-height: 1.02;
+
+      color: var(--green-950);
+    }
+
+    .hero h1 span {
+      color: var(--green-700);
+    }
+
+    .hero-description {
+      max-width: 690px;
+
+      margin: 0;
+
+      color: var(--text-soft);
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      margin-top: 30px;
+    }
+
+    .meta-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      padding: 9px 13px;
+
+      background: rgba(255,255,255,.75);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+
+      color: var(--text-soft);
+      font-size: 13px;
+    }
+
+    .meta-pill strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* =========================
+       PAGE LAYOUT
+    ========================= */
+
+    .page {
+      max-width: var(--max-width);
+      margin: auto;
+      padding: 60px 28px 100px;
+
+      display: grid;
+      grid-template-columns: 250px minmax(0, 720px);
+      gap: 70px;
+
+      align-items: start;
+    }
+
+    /* =========================
+       SIDEBAR
+    ========================= */
+
+    .sidebar {
+      position: sticky;
+      top: 105px;
+    }
+
+    .sidebar-title {
+      margin-bottom: 15px;
+
+      color: var(--text-muted);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .toc {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .toc a {
+      position: relative;
+
+      padding: 8px 10px;
+
+      color: var(--text-soft);
+      text-decoration: none;
+
+      font-size: 13px;
+      line-height: 1.4;
+
+      border-radius: 8px;
+
+      transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease;
+    }
+
+    .toc a:hover {
+      background: var(--surface);
+      color: var(--green-800);
+      transform: translateX(2px);
+    }
+
+    /* =========================
+       MOBILE TOC
+    ========================= */
+
+    .mobile-toc {
+      display: none;
+      margin-bottom: 35px;
+    }
+
+    .mobile-toc button {
+      width: 100%;
+
+      padding: 14px 16px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+
+      color: var(--green-900);
+
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .mobile-toc-content {
+      display: none;
+
+      margin-top: 8px;
+      padding: 10px;
+
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+
+      box-shadow: var(--shadow-sm);
+    }
+
+    .mobile-toc-content.open {
+      display: block;
+    }
+
+    .mobile-toc-content a {
+      display: block;
+      padding: 9px 10px;
+
+      color: var(--text-soft);
+      text-decoration: none;
+
+      font-size: 14px;
+
+      border-radius: 8px;
+    }
+
+    .mobile-toc-content a:hover {
+      background: var(--green-50);
+      color: var(--green-800);
+    }
+
+    /* =========================
+       CONTENT
+    ========================= */
+
+    .content {
+      min-width: 0;
+    }
+
+    .intro-card {
+      padding: 24px 26px;
+      margin-bottom: 45px;
+
+      background: var(--green-900);
+      color: white;
+
+      border-radius: var(--radius-md);
+
+      box-shadow: var(--shadow-md);
+    }
+
+    .intro-card p {
+      margin: 0;
+      color: #dbe5dc;
+      font-size: 15px;
+    }
+
+    .intro-card strong {
+      color: white;
+    }
+
+    /* =========================
+       SECTIONS
+    ========================= */
+
+    .policy-section {
+      position: relative;
+
+      margin-bottom: 58px;
+      padding-bottom: 58px;
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .policy-section:last-child {
+      border-bottom: 0;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+
+      margin-bottom: 17px;
+    }
+
+    .section-number {
+      flex-shrink: 0;
+
+      width: 34px;
+      height: 34px;
+
+      display: grid;
+      place-items: center;
+
+      background: var(--gold-soft);
+      color: #9b691e;
+
+      border-radius: 10px;
+
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .policy-section h2 {
+      margin: 1px 0 0;
+
+      color: var(--green-950);
+
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 28px;
+      font-weight: 500;
+      letter-spacing: -.02em;
+      line-height: 1.25;
+    }
+
+    .policy-section p {
+      margin: 0 0 15px;
+
+      color: var(--text);
+
+      font-size: 15.5px;
+    }
+
+    .policy-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* =========================
+       HIGHLIGHT
+    ========================= */
+
+    .highlight {
+      display: flex;
+      gap: 14px;
+
+      margin-top: 22px;
+      padding: 18px 20px;
+
+      background: var(--green-50);
+      border: 1px solid var(--green-100);
+      border-radius: 14px;
+    }
+
+    .highlight-icon {
+      flex-shrink: 0;
+
+      width: 30px;
+      height: 30px;
+
+      display: grid;
+      place-items: center;
+
+      background: var(--green-800);
+      color: white;
+
+      border-radius: 9px;
+
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .highlight p {
+      margin: 0;
+
+      color: var(--text-soft);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact-card {
+      position: relative;
+      overflow: hidden;
+
+      margin-top: 25px;
+      padding: 28px;
+
+      background: var(--green-950);
+      color: white;
+
+      border-radius: var(--radius-md);
+
+      box-shadow: var(--shadow-md);
+    }
+
+    .contact-card::after {
+      content: "";
+
+      position: absolute;
+      right: -50px;
+      top: -70px;
+
+      width: 180px;
+      height: 180px;
+
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 50%;
+    }
+
+    .contact-label {
+      margin: 0 0 7px;
+
+      color: #aebfb1;
+
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .contact-name {
+      margin: 0;
+
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 23px;
+    }
+
+    .contact-role {
+      margin: 3px 0 18px;
+
+      color: #b9c8bb;
+      font-size: 13px;
+    }
+
+    .contact-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      color: #e8c47e;
+      text-decoration: none;
+
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .contact-email:hover {
+      text-decoration: underline;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .footer {
+      background: var(--green-950);
+      color: white;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: auto;
+      padding: 45px 28px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-icon {
+      width: 32px;
+      height: 32px;
+
+      display: grid;
+      place-items: center;
+
+      background: rgba(255,255,255,.1);
+      border-radius: 9px;
+
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .footer-brand span {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .footer-text {
+      color: #94a497;
+      font-size: 12px;
+      text-align: right;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      .page {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .sidebar {
+        display: none;
+      }
+
+      .mobile-toc {
+        display: block;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      body {
+        font-size: 15px;
+      }
+
+      .header-inner {
+        height: 68px;
+        padding: 0 18px;
+      }
+
+      .header-label {
+        display: none;
+      }
+
+      .brand-icon {
+        width: 37px;
+        height: 37px;
+      }
+
+      .brand-name {
+        font-size: 16px;
+      }
+
+      .hero-inner {
+        padding: 55px 20px 52px;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .hero-description {
+        font-size: 16px;
+      }
+
+      .hero-meta {
+        gap: 7px;
+      }
+
+      .meta-pill {
+        font-size: 12px;
+      }
+
+      .page {
+        padding: 40px 20px 75px;
+      }
+
+      .intro-card {
+        padding: 20px;
+      }
+
+      .policy-section {
+        margin-bottom: 45px;
+        padding-bottom: 45px;
+      }
+
+      .section-heading {
+        gap: 11px;
+      }
+
+      .section-number {
+        width: 31px;
+        height: 31px;
+      }
+
+      .policy-section h2 {
+        font-size: 23px;
+      }
+
+      .policy-section p {
+        font-size: 15px;
+      }
+
+      .contact-card {
+        padding: 23px;
+      }
+
+      .footer-inner {
+        padding: 32px 20px;
+
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-text {
+        text-align: left;
+      }
+    }
+
+    /* =========================
+       REDUCED MOTION
+    ========================= */
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      * {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header class="header">
+    <div class="header-inner">
+
+      <a href="#" class="brand">
+        <div class="brand-icon">C</div>
+
+        <div class="brand-text">
+          <span class="brand-name">CuMeal</span>
+          <span class="brand-subtitle">CU Mess Menu</span>
+        </div>
+      </a>
+
+      <div class="header-label">
+        Privacy Policy
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-inner">
+
+      <div class="eyebrow">
+        <span class="eyebrow-dot"></span>
+        Privacy & Transparency
+      </div>
+
+      <h1>
+        Your privacy,<br>
+        <span>kept simple.</span>
+      </h1>
+
+      <p class="hero-description">
+        CuMeal shows today's and tomorrow's mess menu and hall
+        timings. This policy explains what little data the app
+        touches, how it is used, and why.
+      </p>
+
+      <div class="hero-meta">
+
+        <div class="meta-pill">
+          <strong>Effective</strong>
+          September 25, 2026
+        </div>
+
+        <div class="meta-pill">
+          <strong>No account</strong>
+          Required
+        </div>
+
+        <div class="meta-pill">
+          <strong>No location</strong>
+          Access
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- MAIN -->
+
+  <div class="page">
+
+    <!-- DESKTOP SIDEBAR -->
+
+    <aside class="sidebar">
+
+      <div class="sidebar-title">
+        On this page
+      </div>
+
+      <nav class="toc">
+
+        <a href="#overview">Overview</a>
+        <a href="#collect">Information we collect</a>
+        <a href="#analytics">Analytics</a>
+        <a href="#menu-data">Menu data</a>
+        <a href="#local-storage">Local storage</a>
+        <a href="#advertising">Advertising</a>
+        <a href="#location">Location</a>
+        <a href="#sharing">Data sharing</a>
+        <a href="#retention">Retention & deletion</a>
+        <a href="#children">Children</a>
+        <a href="#changes">Changes</a>
+        <a href="#contact">Contact</a>
+
+      </nav>
+
+    </aside>
+
+
+    <!-- MOBILE TOC -->
+
+    <div class="mobile-toc">
+
+      <button id="tocButton" aria-expanded="false">
+        <span>Table of contents</span>
+        <span id="tocArrow">↓</span>
+      </button>
+
+      <div class="mobile-toc-content" id="tocContent">
+
+        <a href="#overview">Overview</a>
+        <a href="#collect">Information we collect</a>
+        <a href="#analytics">Analytics</a>
+        <a href="#menu-data">Menu data</a>
+        <a href="#local-storage">Local storage</a>
+        <a href="#advertising">Advertising</a>
+        <a href="#location">Location</a>
+        <a href="#sharing">Data sharing</a>
+        <a href="#retention">Retention & deletion</a>
+        <a href="#children">Children</a>
+        <a href="#changes">Changes</a>
+        <a href="#contact">Contact</a>
+
+      </div>
+
+    </div>
+
+
+    <!-- CONTENT -->
+
+    <main class="content">
+
+
+      <div class="intro-card">
+
+        <p>
+          <strong>In short:</strong>
+          CuMeal does not require an account, does not ask for
+          your location, and does not currently display advertising.
+          We use Firebase Analytics and Firebase Realtime Database
+          to operate and understand the app.
+        </p>
+
+      </div>
+
+
+      <!-- 01 -->
+
+      <section class="policy-section" id="overview">
+
+        <div class="section-heading">
+
+          <div class="section-number">01</div>
+
+          <h2>Overview</h2>
+
+        </div>
+
+        <p>
+          CuMeal ("CuMeal", "we", "us", or "our") is a mobile
+          application that provides CU mess menu information for
+          today and tomorrow and displays mess timings.
+        </p>
+
+      </section>
+
+
+      <!-- 02 -->
+
+      <section class="policy-section" id="collect">
+
+        <div class="section-heading">
+
+          <div class="section-number">02</div>
+
+          <h2>Information we collect</h2>
+
+        </div>
+
+        <p>
+          CuMeal does not require an account or login and does not
+          ask you to provide your name, email address, phone number,
+          location, or other personal information directly in the app.
+        </p>
+
+        <div class="highlight">
+
+          <div class="highlight-icon">✓</div>
+
+          <p>
+            You can use CuMeal without creating an account or
+            providing personal information directly to us.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- 03 -->
+
+      <section class="policy-section" id="analytics">
+
+        <div class="section-heading">
+
+          <div class="section-number">03</div>
+
+          <h2>Analytics</h2>
+
+        </div>
+
+        <p>
+          CuMeal uses Firebase Analytics to understand how the app
+          is used, such as which screens and app features are used.
+          Firebase Analytics is provided by Google and may collect
+          usage, device, and diagnostic information according to
+          Google's applicable documentation and privacy practices.
+        </p>
+
+      </section>
+
+
+      <!-- 04 -->
+
+      <section class="policy-section" id="menu-data">
+
+        <div class="section-heading">
+
+          <div class="section-number">04</div>
+
+          <h2>Menu data</h2>
+
+        </div>
+
+        <p>
+          CuMeal retrieves menu information from Firebase Realtime
+          Database. The database contains menu information such as
+          breakfast, lunch, snacks, and dinner entries.
+        </p>
+
+        <p>
+          This menu content is not submitted by individual users
+          through the app.
+        </p>
+
+      </section>
+
+
+      <!-- 05 -->
+
+      <section class="policy-section" id="local-storage">
+
+        <div class="section-heading">
+
+          <div class="section-number">05</div>
+
+          <h2>Local storage</h2>
+
+        </div>
+
+        <p>
+          CuMeal stores menu information locally on your device so
+          previously retrieved menus can be displayed without another
+          database request.
+        </p>
+
+        <p>
+          This cached menu information is not an account or user profile.
+        </p>
+
+      </section>
+
+
+      <!-- 06 -->
+
+      <section class="policy-section" id="advertising">
+
+        <div class="section-heading">
+
+          <div class="section-number">06</div>
+
+          <h2>Advertising</h2>
+
+        </div>
+
+        <p>
+          The current version of CuMeal does not display advertising.
+        </p>
+
+      </section>
+
+
+      <!-- 07 -->
+
+      <section class="policy-section" id="location">
+
+        <div class="section-heading">
+
+          <div class="section-number">07</div>
+
+          <h2>Location</h2>
+
+        </div>
+
+        <p>
+          CuMeal does not request or use your device's location.
+        </p>
+
+        <div class="highlight">
+
+          <div class="highlight-icon">⌖</div>
+
+          <p>
+            Location permission is not required to use the app.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- 08 -->
+
+      <section class="policy-section" id="sharing">
+
+        <div class="section-heading">
+
+          <div class="section-number">08</div>
+
+          <h2>Data sharing</h2>
+
+        </div>
+
+        <p>
+          CuMeal does not sell your personal information.
+        </p>
+
+        <p>
+          The app uses third-party services, including Google
+          Firebase services, to provide analytics and database
+          functionality. Information handled by those services is
+          subject to their applicable terms and privacy policies.
+        </p>
+
+      </section>
+
+
+      <!-- 09 -->
+
+      <section class="policy-section" id="retention">
+
+        <div class="section-heading">
+
+          <div class="section-number">09</div>
+
+          <h2>Retention & deletion</h2>
+
+        </div>
+
+        <p>
+          Menu data cached on your device can be removed by deleting
+          the CuMeal app or clearing its app data using the operating
+          system's available controls.
+        </p>
+
+        <p>
+          CuMeal does not maintain a user account or user profile
+          that you can delete from within the app.
+        </p>
+
+        <div class="highlight">
+
+          <div class="highlight-icon">i</div>
+
+          <p>
+            No account means there's usually nothing tied to you to
+            look up, correct, or delete beyond what's already on
+            your device.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- 10 -->
+
+      <section class="policy-section" id="children">
+
+        <div class="section-heading">
+
+          <div class="section-number">10</div>
+
+          <h2>Children</h2>
+
+        </div>
+
+        <p>
+          CuMeal is not specifically directed to children and does
+          not knowingly request personal information from children.
+        </p>
+
+      </section>
+
+
+      <!-- 11 -->
+
+      <section class="policy-section" id="changes">
+
+        <div class="section-heading">
+
+          <div class="section-number">11</div>
+
+          <h2>Changes to this policy</h2>
+
+        </div>
+
+        <p>
+          We may update this Privacy Policy when the app's data
+          practices change or when necessary to reflect applicable
+          requirements.
+        </p>
+
+        <p>
+          The updated policy will be published on this page with
+          a new effective date.
+        </p>
+
+      </section>
+
+
+      <!-- 12 -->
+
+      <section class="policy-section" id="contact">
+
+        <div class="section-heading">
+
+          <div class="section-number">12</div>
+
+          <h2>Contact</h2>
+
+        </div>
+
+        <p>
+          For privacy questions or requests, contact:
+        </p>
+
+        <div class="contact-card">
+
+          <p class="contact-label">
+            Privacy contact
+          </p>
+
+          <p class="contact-name">
+            Vishwajeet Kumar
+          </p>
+
+          <p class="contact-role">
+            Developer, CuMeal
+          </p>
+
+          <a
+            class="contact-email"
+            href="mailto:vishwajeetx14@gmail.com"
+          >
+            vishwajeetx14@gmail.com
+            <span>↗</span>
+          </a>
+
+        </div>
+
+      </section>
+
+
+    </main>
+
+  </div>
+
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+
+        <div class="footer-icon">
+          C
+        </div>
+
+        <span>
+          CuMeal
+        </span>
+
+      </div>
+
+      <div class="footer-text">
+
+        <div>
+          Privacy Policy
+        </div>
+
+        <div>
+          Last updated September 25, 2026
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- MOBILE MENU SCRIPT -->
+
+  <script>
+
+    const tocButton = document.getElementById("tocButton");
+    const tocContent = document.getElementById("tocContent");
+    const tocArrow = document.getElementById("tocArrow");
+
+    tocButton.addEventListener("click", function () {
+
+      const isOpen = tocContent.classList.toggle("open");
+
+      tocButton.setAttribute(
+        "aria-expanded",
+        isOpen ? "true" : "false"
+      );
+
+      tocArrow.textContent = isOpen ? "↑" : "↓";
+
+    });
+
+
+    /*
+      Close mobile navigation after selecting a section.
+    */
+
+    document.querySelectorAll(".mobile-toc-content a")
+      .forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+          tocContent.classList.remove("open");
+
+          tocButton.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+          tocArrow.textContent = "↓";
+
+        });
+
+      });
+
+  </script>
+
+</body>
+</html>
+```
